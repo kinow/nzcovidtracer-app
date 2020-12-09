@@ -33,7 +33,7 @@ This project uses [react-native-config](https://github.com/luggit/react-native-c
 To create a env file, run `cp .env.example .env`
 
 ### Generating an encryption key for Realm Db (Optional)
-Generate 64 [random bytes](https://www.random.org/cgi-bin/randbyte?nbytes=64&format=h), copy the bytes in hexadeicmal format
+Generate 64 [random bytes](https://www.random.org/cgi-bin/randbyte?nbytes=64&format=h), copy the bytes in hexadecimal format
 Go to [Binary to Base64](https://cryptii.com/pipes/binary-to-base64), choose Hexadecimal format and convert it to text
 Go to `.env` file, configure `DbEncryptionKey` with the key
 

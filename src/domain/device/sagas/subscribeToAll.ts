@@ -20,18 +20,18 @@ const { logInfo, logError } = createLogger("device/subscribeToAll");
 export function* subscribeToAll(): SagaIterator {
   yield takeLatest(
     [setNotificationPermission, appDidBecomeAvailable],
-    onSubcribeToAll,
+    onSubscribeToAll,
   );
 }
 
-export function* onSubcribeToAll(): SagaIterator {
+export function* onSubscribeToAll(): SagaIterator {
   const status: PermissionStatus = yield select(selectNotificationPermission);
 
   const subscriptions: ReturnType<typeof selectSubscriptions.resultFunc> = yield select(
     selectSubscriptions,
   );
 
-  if (subscriptions.all?.fullfilled) {
+  if (subscriptions.all?.fulfilled) {
     logInfo("already subscribed, skip");
     return;
   }

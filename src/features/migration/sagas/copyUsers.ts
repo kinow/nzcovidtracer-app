@@ -43,7 +43,7 @@ function* _copyUsers(): SagaIterator {
     return;
   }
 
-  // Skip encyption on dev builds
+  // Skip encryption on dev builds
   const skipEncryption = __DEV__;
   logInfo(`skipEncryption: ${skipEncryption ? "true" : "false"}`);
 

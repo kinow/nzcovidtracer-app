@@ -19,7 +19,7 @@ export function useProcessEnfContacts() {
   const memoizedContacts = useDeepMemo(contacts);
   const memoizedConfig = useDeepMemo(notificationConfig);
 
-  // This side effect might be redundant. It is just intended to force exposure.contants update when user opens Dashboard.
+  // This side effect might be redundant. It is just intended to force exposure.constants update when user opens Dashboard.
   // When we use simulateExposure, it does not produce exposure event and do not trigger exposure.contacts update
   // however, contacts are updated on the service side, we just need to nudge plug-in to update it (and getCloseContacts does it)
   // So if you remove it, plz make sure you use "Display all close contacts" command in the Dev Menu after you trigger Simulate exposure.

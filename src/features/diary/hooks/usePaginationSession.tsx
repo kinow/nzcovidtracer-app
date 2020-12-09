@@ -2,7 +2,7 @@ import {
   loadNextPage,
   refresh,
   startPaginationSession,
-  stopPagniationSession,
+  stopPaginationSession,
 } from "@features/diary/reducer";
 import { nanoid } from "@reduxjs/toolkit";
 import { useEffect, useMemo, useState } from "react";
@@ -23,7 +23,7 @@ export function usePaginationSession(userIds?: string[]) {
     );
 
     return () => {
-      dispatch(stopPagniationSession(sessionId));
+      dispatch(stopPaginationSession(sessionId));
     };
   }, [dispatch, sessionId, userIds]);
 

@@ -12,7 +12,7 @@ import { persistReducer } from "redux-persist";
 export type PermissionStatus = "unavailable" | "denied" | "blocked" | "granted";
 
 export interface SubscriptionState {
-  fullfilled: boolean;
+  fulfilled: boolean;
   error?: SerializedError;
 }
 
@@ -72,7 +72,7 @@ const deviceSlice = createSlice({
     ) {
       state.notificationPermission = payload;
     },
-    setCameraPermision(state, { payload }: PayloadAction<PermissionStatus>) {
+    setCameraPermission(state, { payload }: PayloadAction<PermissionStatus>) {
       state.cameraPermission = payload;
     },
     setAppState(state, { payload }: PayloadAction<AppStateStatus>) {
@@ -80,7 +80,7 @@ const deviceSlice = createSlice({
     },
     subscriptionFulfilled(state, { payload }: PayloadAction<string>) {
       state.subscriptions[payload] = {
-        fullfilled: true,
+        fulfilled: true,
       };
     },
     subscriptionRejected(
@@ -88,7 +88,7 @@ const deviceSlice = createSlice({
       { payload }: PayloadAction<SubscriptionRejected>,
     ) {
       state.subscriptions[payload.name] = {
-        fullfilled: false,
+        fulfilled: false,
         error: payload,
       };
     },
@@ -109,7 +109,7 @@ const { reducer, actions } = deviceSlice;
 
 export const {
   setNotificationPermission,
-  setCameraPermision,
+  setCameraPermission,
   setAppState,
   subscriptionFulfilled,
   subscriptionRejected,

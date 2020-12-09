@@ -18,7 +18,7 @@ export const strings = {
         nhiDetailsHasNHI: "My NHI number",
         nhiDescriptionHasNHI:
           "Getting a COVID-19 test? Show this at a testing station for a faster service",
-        feeback: "Feedback",
+        feedback: "Feedback",
         privacyNSecurity: "Privacy & Security",
         termsOfUse: "Terms of Use",
         copyrightNAttribution: "Copyright & Attribution",

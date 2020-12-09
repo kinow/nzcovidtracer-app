@@ -7,16 +7,16 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import {
   appDidBecomeAvailable,
   PermissionStatus,
-  setCameraPermision,
+  setCameraPermission,
 } from "../reducer";
 
 const { logError } = createLogger("device/checkCameraPermission");
 
 export function* checkCameraPermission(): SagaIterator {
-  yield takeLatest(appDidBecomeAvailable.type, onCheckCameraPermision);
+  yield takeLatest(appDidBecomeAvailable.type, onCheckCameraPermission);
 }
 
-function* onCheckCameraPermision(): SagaIterator {
+function* onCheckCameraPermission(): SagaIterator {
   const CAMERA_PERMISSION =
     Platform.OS === "ios" ? PERMISSIONS.IOS.CAMERA : PERMISSIONS.ANDROID.CAMERA;
   try {
@@ -25,7 +25,7 @@ function* onCheckCameraPermision(): SagaIterator {
       CAMERA_PERMISSION,
     );
 
-    yield put(setCameraPermision(permissionStatus));
+    yield put(setCameraPermission(permissionStatus));
   } catch (error) {
     logError(error);
   }

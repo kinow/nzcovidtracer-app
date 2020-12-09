@@ -14,9 +14,9 @@ abstract class MigrationDao {
 
     @Query("SELECT * FROM users")
     abstract suspend fun getAllUsers(): List<User>
-  
+
     @Query("DELETE FROM tracing_locations WHERE datetime(time) < datetime('now', :locationDateFiltering)")
-    abstract suspend fun doDatabaseMantenance(locationDateFiltering: String)
+    abstract suspend fun doDatabaseMaintenance(locationDateFiltering: String)
 
     @Query("DELETE FROM matched_locations WHERE datetime(startDate) < datetime('now', :locationDateFiltering)")
     abstract suspend fun doDatabaseMantenanceMatchedLocations(locationDateFiltering: String)

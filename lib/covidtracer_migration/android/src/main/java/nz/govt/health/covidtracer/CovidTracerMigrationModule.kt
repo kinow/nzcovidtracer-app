@@ -24,9 +24,9 @@ class CovidTracerMigrationModule(reactContext: ReactApplicationContext) : ReactC
         try {
             DbModule.withDb(reactApplicationContext, skipEncryption) { db ->
                 try {
-                    db.getMigrationDao()?.doDatabaseMantenance(databaseFilteringDate)
+                    db.getMigrationDao()?.doDatabaseMaintenance(databaseFilteringDate)
                     db.getMigrationDao()
-                        ?.doDatabaseMantenanceMatchedLocations(databaseFilteringDate)
+                        ?.doDatabaseMaintenanceMatchedLocations(databaseFilteringDate)
                     promise.resolve(null)
                 } catch(exception: Exception) {
                     promise.reject(exception)

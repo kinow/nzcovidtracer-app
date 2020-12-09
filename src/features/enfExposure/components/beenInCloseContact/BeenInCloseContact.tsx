@@ -86,7 +86,7 @@ export function BeenInCloseContact({ enfAlert }: BeenInCloseContactProps) {
           style: "cancel",
         },
         {
-          text: t("screens:dashboard:beenInCloseContact:dismiss:dimiss"),
+          text: t("screens:dashboard:beenInCloseContact:dismiss:dismiss"),
           onPress: () => {
             recordDismissENFAlert(enfAlert);
             dispatch(dismissEnfAlert(enfAlert.exposureDate));

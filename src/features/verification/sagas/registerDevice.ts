@@ -85,7 +85,7 @@ function* onRegisterDevice(
     if (notifyEnfOnSuccess) {
       yield call(notifyRegisterDeviceRetrySuccess);
       yield put(setEnfEnableNotificationSent());
-      logInfo("retry device successful - ENF notifiy success");
+      logInfo("retry device successful - ENF notify success");
     }
   } catch (err) {
     yield put(

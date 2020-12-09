@@ -15,7 +15,7 @@ export const showSubscription: TestCommand = {
     }
     const state: ReduxState = store.getState();
     const permission = state.device.notificationPermission;
-    const hasTopic = state.device.subscriptions.all?.fullfilled;
+    const hasTopic = state.device.subscriptions.all?.fulfilled;
     const subscribed = permission === "granted" && hasTopic;
 
     const status = `[permission=${permission}] [topic=${

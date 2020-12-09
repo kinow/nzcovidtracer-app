@@ -58,7 +58,7 @@ export interface OnboardingStateV1 {
    */
   enfSupported?: boolean;
   /**
-   * Device registeration state
+   * Device registration state
    */
   deviceRegistered?: DeviceRegistered;
   /**

@@ -17,7 +17,7 @@ import { selectRefreshToken, selectToken } from "../selectors";
 import { registerDevice } from "./registerDevice";
 
 describe("#registerDevice", () => {
-  it("fullfills registration", async () => {
+  it("fulfills registration", async () => {
     const tokens = {
       token: nanoid(),
       refreshToken: nanoid(),

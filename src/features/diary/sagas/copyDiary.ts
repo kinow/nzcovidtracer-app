@@ -33,7 +33,7 @@ function* onCopyDiary({ payload }: PayloadAction<CopyDiary>): SagaIterator {
     // TODO translate
     yield put(
       copyDiaryRejected(
-        new Error("An unknown error occured. Please try again."),
+        new Error("An unknown error occurred. Please try again."),
       ),
     );
   } else {

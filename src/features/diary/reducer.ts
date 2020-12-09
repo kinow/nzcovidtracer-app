@@ -176,7 +176,7 @@ const diarySlice = createSlice({
         );
       }
     },
-    stopPagniationSession(state, { payload }: PayloadAction<string>) {
+    stopPaginationSession(state, { payload }: PayloadAction<string>) {
       for (const id of state.sessions[payload].allIds) {
         delete state.byId[id];
       }
@@ -331,7 +331,7 @@ export const {
   setQuerying,
   refresh,
   startPaginationSession,
-  stopPagniationSession,
+  stopPaginationSession,
   shareDiary,
   shareDiaryFulfilled,
   shareDiaryRejected,

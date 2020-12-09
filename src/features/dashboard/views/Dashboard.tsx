@@ -177,7 +177,7 @@ export const Dashboard = (props: Props) => {
         style: "cancel",
       },
       {
-        text: t("screens:dashboard:alerts:dismiss:dimiss"),
+        text: t("screens:dashboard:alerts:dismiss:dismiss"),
         onPress: () => {
           batch(() => {
             if (enfAlert) {

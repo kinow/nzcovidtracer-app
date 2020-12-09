@@ -85,7 +85,7 @@ export default describe("Diary/reducer", () => {
     return state.sessions[sessionId].allIds.map((x) => state.byId[x]);
   };
 
-  describe("addEntry.fullfilled", () => {
+  describe("addEntry.fulfilled", () => {
     const sessionId = nanoid();
     const initState = buildInitialState(initialEntries, sessionId);
     const request = {
@@ -103,7 +103,7 @@ export default describe("Diary/reducer", () => {
     });
   });
 
-  describe("editEntry.fullfilled", () => {
+  describe("editEntry.fulfilled", () => {
     const sessionId = nanoid();
     const initState = buildInitialState([newEntry, initialEntry], sessionId);
 
@@ -120,7 +120,7 @@ export default describe("Diary/reducer", () => {
     });
   });
 
-  describe("deleteEntry.fullfilled", () => {
+  describe("deleteEntry.fulfilled", () => {
     const sessionId = nanoid();
     const initState = buildInitialState([newEntry, initialEntry], sessionId);
 

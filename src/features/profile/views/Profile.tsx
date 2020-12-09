@@ -182,11 +182,11 @@ export default function Profile(props: ProfileProps) {
       )}
       <VerticalSpacing height={16} />
       <Link
-        text={t("screens:profile:feeback")}
+        text={t("screens:profile:feedback")}
         onPress={() => {
           Linking.openURL(feedbackLink);
         }}
-        accessibilityLabel={t("screens:profile:feeback")}
+        accessibilityLabel={t("screens:profile:feedback")}
       />
       <Link
         text={t("screens:profile:privacyNSecurity")}

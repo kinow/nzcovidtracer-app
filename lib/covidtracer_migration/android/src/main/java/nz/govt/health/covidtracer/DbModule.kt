@@ -34,8 +34,8 @@ class DbModule private constructor(private val context: Context) {
     suspend fun runMaintenance(dbMaintenanceTime: String) {
           //TODO: We might not need to clean the db every time we open it,
           // find if there is a better time/place to do this.
-          getMigrationDao()?.doDatabaseMantenance(dbMaintenanceTime)
-          getMigrationDao()?.doDatabaseMantenance(dbMaintenanceTime)
+          getMigrationDao()?.doDatabaseMaintenance(dbMaintenanceTime)
+          getMigrationDao()?.doDatabaseMaintenance(dbMaintenanceTime)
     }
 
     private fun closeDb() {
@@ -56,7 +56,7 @@ class DbModule private constructor(private val context: Context) {
         }
     }
 
-    fun getMigrationDao() : MigrationDao? {  
+    fun getMigrationDao() : MigrationDao? {
         return tracingDatabase!!.getDatabase()!!.migrationDao()
     }
 }

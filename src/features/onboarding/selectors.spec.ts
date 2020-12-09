@@ -44,7 +44,7 @@ describe("#hasOnboarded", () => {
   it("false if one screen is not completed, skipped or pending", () => {
     const state = buildState();
 
-    // Not copmleted, by default skipped and pending is false as well
+    // Not completed, by default skipped and pending is false as well
     state.screenCompleted[state.screens[0]] = false;
 
     expect(selectHasOnboarded.resultFunc(state)).toBe(false);

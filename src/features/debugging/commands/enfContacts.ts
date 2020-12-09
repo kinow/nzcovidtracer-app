@@ -5,7 +5,7 @@ import { ExposureContextValue } from "react-native-exposure-notification-service
 
 export const enfContacts = (exposure: ExposureContextValue): TestCommand => ({
   command: "enfContacts",
-  title: "Display all close constacts",
+  title: "Display all close contacts",
   async run() {
     const { getCloseContacts } = exposure;
     const contacts = await getCloseContacts();
@@ -39,7 +39,7 @@ export const enfContacts = (exposure: ExposureContextValue): TestCommand => ({
       "\n",
     );
     Alert.alert(
-      `Close constacts (${contacts?.length})\nThe most recent exposure:\n${
+      `Close contacts (${contacts?.length})\nThe most recent exposure:\n${
         latestExposureDate
           ? moment(latestExposureDate).format("DD MMM HH:mm")
           : "none"

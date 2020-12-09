@@ -81,7 +81,7 @@ export interface NotificationUserInfo {
   isLocal?: boolean;
 }
 
-const acknowledgeMatches = createAsyncThunk("exposure/dimiss", async () => {
+const acknowledgeMatches = createAsyncThunk("exposure/dismiss", async () => {
   await acknowledgeOutstandingMatches();
   PushNotification.cancelAllLocalNotifications();
   return await getMostRecentUnacknowledgedMatch();

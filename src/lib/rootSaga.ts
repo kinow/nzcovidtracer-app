@@ -5,7 +5,7 @@ import diary from "@features/diary/sagas";
 import enf from "@features/enf/sagas";
 import enfExposure from "@features/enfExposure/sagas";
 import exposure from "@features/exposure/sagas";
-import maintanence from "@features/maintanence/saga";
+import maintenance from "@features/maintenance/saga";
 import migration from "@features/migration/sagas";
 import onboarding from "@features/onboarding/saga";
 import otp from "@features/otp/sagas";
@@ -16,7 +16,7 @@ import { all, call } from "redux-saga/effects";
 export default function* rootSaga(): SagaIterator {
   yield all([
     call(onboarding),
-    call(maintanence),
+    call(maintenance),
     call(debugging),
     call(migration),
     call(device),

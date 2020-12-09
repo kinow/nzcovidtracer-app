@@ -7,7 +7,7 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import {
   PermissionStatus,
   requestCameraPermission as requestCameraPermissionAction,
-  setCameraPermision,
+  setCameraPermission,
   setHasRequestedCameraPermission,
 } from "../reducer";
 
@@ -27,7 +27,7 @@ function* onRequestCameraPermission(): SagaIterator {
   try {
     const result: PermissionStatus = yield call(request, CAMERA_PERMISSION);
     yield put(setHasRequestedCameraPermission());
-    yield put(setCameraPermision(result));
+    yield put(setCameraPermission(result));
   } catch (error) {
     logError(error);
   }

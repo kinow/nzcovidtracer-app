@@ -112,7 +112,7 @@ const strings = {
           "Enter an email address in the correct format, like name@example.com",
         required: "Enter an email address",
         tooManyAttempts: "Too many attempts. Try again later.",
-        generic: "An unknown error occured. Please try again.",
+        generic: "An unknown error occurred. Please try again.",
       },
       code: {
         notValid: "Enter a 6-digit code",
@@ -120,7 +120,7 @@ const strings = {
         invalidAuthSession:
           "The verification has timed out. Please go back and enter your email again.",
         invalidAuthCode: "Incorrect code. Check your code and try again",
-        generic: "An unknown error occured. Please try again.",
+        generic: "An unknown error occurred. Please try again.",
         tooManyAttempts: "Too many attempts. Try again later.",
       },
       placeOrActivity: {
@@ -179,7 +179,7 @@ const strings = {
       generic: "Something went wrong. Please try again.",
       // TODO verify string
       network:
-        "A network error occured. Check your internet connection and try again.",
+        "A network error occurred. Check your internet connection and try again.",
       dataRequestCode: {
         incorrectCode: "Incorrect code. Check your code and try again",
         network:

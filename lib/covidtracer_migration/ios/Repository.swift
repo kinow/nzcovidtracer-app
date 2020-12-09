@@ -9,7 +9,7 @@ class Repository
     static let privateKeychainProtection = kSecAttrAccessibleWhenUnlocked as String
     static let publicKeychainIdentifier = "public_database_key_identifier"
     static let privateKeychainIdentifier = "private_database_key_identifier"
-    
+
     static func applyFileProtection(publicFolderPath: String) {
         updateFileProtectionForFileIfRequired(publicFolderPath, Repository.publicFileProtection)
     }
@@ -38,7 +38,7 @@ class Repository
     }
 
     // IMPORTANT: The getKey function has been updated to use a local file to store the encryption key
-    // because of an issue where restoring the OS from a backup or transfering to another device has caused the
+    // because of an issue where restoring the OS from a backup or transferring to another device has caused the
     // keychain to lose the keychain entries. This causes realm to fail to get the correct key to decrypt the
     // database.
     //

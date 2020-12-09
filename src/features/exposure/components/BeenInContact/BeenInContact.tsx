@@ -100,7 +100,7 @@ export function BeenInContact({ onRequestCallback }: BeenInContactProps) {
         style: "cancel",
       },
       {
-        text: t("screens:dashboard:beenInContact:dismiss:dimiss"),
+        text: t("screens:dashboard:beenInContact:dismiss:dismiss"),
         onPress: () => {
           recordDismissLocationAlert(exposureMatch);
           dispatch(acknowledgeMatches());

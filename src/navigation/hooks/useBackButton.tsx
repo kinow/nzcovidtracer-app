@@ -21,7 +21,7 @@ export function useBackButton(
 ) {
   const handleBackPressed = options?.handleBackPressed;
   useEffect(() => {
-    const unsubsribe = navigation.addListener("beforeRemove", (e) => {
+    const unsubscribe = navigation.addListener("beforeRemove", (e) => {
       if (!handleBackPressed) {
         return;
       }
@@ -31,6 +31,6 @@ export function useBackButton(
         e.preventDefault();
       }
     });
-    return unsubsribe;
+    return unsubscribe;
   }, [navigation, handleBackPressed]);
 }

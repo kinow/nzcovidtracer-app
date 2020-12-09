@@ -13,7 +13,7 @@ import {
   setQuerying,
   StartPaginationSession,
   startPaginationSession,
-  stopPagniationSession,
+  stopPaginationSession,
 } from "../reducer";
 import { selectSessions } from "../selectors";
 
@@ -26,16 +26,16 @@ export function* pagination(): SagaIterator {
     );
     const sessionId = action.payload.sessionId;
     logInfo("Starting a new session");
-    yield fork(pagniationSession, sessionId);
+    yield fork(paginationSession, sessionId);
   }
 }
 
-function* pagniationSession(sessionId: string): SagaIterator {
+function* paginationSession(sessionId: string): SagaIterator {
   const task: Task = yield fork(loadNextPages, sessionId);
 
   while (true) {
     const action: PayloadAction<string> = yield take(
-      stopPagniationSession.type,
+      stopPaginationSession.type,
     );
     if (action.payload === sessionId) {
       yield cancel(task);
@@ -57,7 +57,7 @@ function* loadNextPages(sessionId: string): SagaIterator {
     const sessions = yield select(selectSessions);
     const userIds = sessions[sessionId].userIds;
     const endOfToday = new Date();
-    /* Entries are allowed to be added with start date in the future 
+    /* Entries are allowed to be added with start date in the future
       up to the end of the current day */
     endOfToday.setHours(23, 59, 59, 0);
     const results = queryResults(db!, userIds, endOfToday);

@@ -96,7 +96,7 @@ export const strings = {
           moreAccessibilityHint: "Leaves the app and navigates to a webpage",
           dismiss: {
             title: "Would you like to dismiss this alert?",
-            dimiss: "Dismiss",
+            dismiss: "Dismiss",
             cancel: "Cancel",
           },
           detailsSent: "Details sent",
@@ -107,7 +107,7 @@ export const strings = {
           moreAccessibilityHint: "Leaves the app and navigates to a webpage",
           dismiss: {
             title: "Would you like to dismiss this alert?",
-            dimiss: "Dismiss",
+            dismiss: "Dismiss",
             cancel: "Cancel",
           },
           lastExposed: "Last exposed: ",
@@ -117,7 +117,7 @@ export const strings = {
           dismissAllAction: "Dismiss all",
           dismiss: {
             title: "Would you like to dismiss these alerts?",
-            dimiss: "Dismiss",
+            dismiss: "Dismiss",
             cancel: "Cancel",
           },
         },

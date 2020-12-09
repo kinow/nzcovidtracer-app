@@ -100,13 +100,13 @@ export function EditDiaryEntryScreen(props: Props) {
   }, [hasNoChanges, props.navigation, t]);
 
   useEffect(() => {
-    const unsubsribe = props.navigation.addListener("beforeRemove", (e) => {
+    const unsubscribe = props.navigation.addListener("beforeRemove", (e) => {
       const result = handleBackPress();
       if (result) {
         e.preventDefault();
       }
     });
-    return unsubsribe;
+    return unsubscribe;
   }, [props.navigation, handleBackPress]);
 
   const cleanErrorMessages = () => {
